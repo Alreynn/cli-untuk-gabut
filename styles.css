@@ -8,12 +8,17 @@ textarea, input {
     box-sizing: border-box;
     background: transparent;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 0.9em;
+    caret-color: lime;
     border: none;
     outline: none;
     resize: none;
 }
+textarea::selection {
+    color: #000;
+    background-color: #fff;
+}
 input {
-    height: 3em;
+    height: 5em;
     font-size: 1em;
 }
