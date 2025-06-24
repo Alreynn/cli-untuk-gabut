@@ -1,9 +1,9 @@
 const textarea = document.getElementById('textarea');
+const input = document.getElementById('input');
 textarea.value =
     'Antarmuka Baris Perintah buat orang gabut.\nKode sumber:    https://github.com/Alreynn/cli-untuk-gabut\nSitus:          https://alreynn.github.io/cli-untuk-gabut/\nMasih dalam tahap pengerjaan.\n';
 
 function sendMessage() {
-    const input = document.getElementById('input');
     const userInput = input.value;
     const selectedWord = [
         'pkg', 'apt', 'git', 'sudo', 'cd',
@@ -12,8 +12,10 @@ function sendMessage() {
         'vim', 'nano', 'nvim', 'python'
     ]
     const bypassedWord = [ 'echo' ]
-    textarea.value += `$ ${userInput}\n`;
-    input.value = '';
+    if (userInput !== '') {     // Cek kondisi apabila userInput tidak kosong
+        textarea.value += `$ ${userInput}\n`;
+        input.value = '';
+    }
     
     selectedWord.forEach(wordIncluded => {
         if (userInput.includes(wordIncluded)) {
