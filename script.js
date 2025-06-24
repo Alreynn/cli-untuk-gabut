@@ -37,9 +37,7 @@ function getFontSize() {
 }
 function closeAside() {
     const aside = document.getElementById('aside');
-    const closeAside = document.getElementById('closeAside');
     aside.classList.toggle('show');
-    closeAside.classList.toggle('openAside');
 }
 function showOption() {
     const fontSizeOption = document.getElementById('fontSizeOption');
@@ -51,3 +49,8 @@ function resize(size) {
     getFontSize();
 }
 getFontSize();
+
+textarea.addEventListener('click', () => {
+    aside.classList.remove('show');
+    fontSizeOption.classList.remove('show');
+})
