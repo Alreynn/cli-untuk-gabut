@@ -9,27 +9,33 @@
 </head>
 
 <aside id="aside">
-    <div id="closeAside" onclick="closeAside()"></div>
+    <div id="asideSandwich" onclick="closeAside()"></div>
     <div class="asideContent">
-        <button onclick="showOption()">Change font size</button>
-        <ul id="fontSizeOption">
-            <div class="mobileSize">
-                <li onclick="resize('8px')">8px</li>
-                <li onclick="resize('10px')">10px</li>
-                <li onclick="resize('12px')">12px</li>
-                <li onclick="resize('14px')">14px</li>
-                <li onclick="resize('16px')">16px</li>
-                <li onclick="resize('20px')">20px</li>
-            </div>
-            <div class="pcSize">
-                <li onclick="resize('16px')">16px</li>
-                <li onclick="resize('20px')">20px</li>
-                <li onclick="resize('22px')">22px</li>
-                <li onclick="resize('24px')">24px</li>
-                <li onclick="resize('28px')">28px</li>
-                <li onclick="resize('30px')">30px</li>
-            </div>
-        </ul>
+        <button onclick="showOption('fontSizeOption')">Ganti ukuran huruf</button>
+            <ul id="fontSizeOption">
+                <div class="mobileSize">
+                    <li onclick="resize('8px')">8px</li>
+                    <li onclick="resize('10px')">10px</li>
+                    <li onclick="resize('12px')">12px</li>
+                    <li onclick="resize('14px')">14px</li>
+                    <li onclick="resize('16px')">16px</li>
+                    <li onclick="resize('20px')">20px</li>
+                </div>
+                <div class="pcSize">
+                    <li onclick="resize('16px')">16px</li>
+                    <li onclick="resize('20px')">20px</li>
+                    <li onclick="resize('22px')">22px</li>
+                    <li onclick="resize('24px')">24px</li>
+                    <li onclick="resize('28px')">28px</li>
+                    <li onclick="resize('30px')">30px</li>
+                </div>
+            </ul>
+        <button onclick="showOption('closeAsidePos')">Ganti letak penutup samping</button>
+            <ul id="closeAsidePos">
+                <li onclick="changeCloseAsidePos('3%')">Atas</li>
+                <li onclick="changeCloseAsidePos('35%')">Tengah</li>
+                <li onclick="changeCloseAsidePos('85%')">Bawah</li>
+            </ul>
     </div>
 </aside>
 <body>

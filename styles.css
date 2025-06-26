@@ -1,47 +1,56 @@
-* { margin: 0; padding: 0; font-family: monospace; }
-#closeAside {
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    color: #fff;
+}
+#asideSandwich {
     display: block;
     position: fixed;
-    background-color: #555;
+    background-color: #77777780;
     top: 35%;
     width: 18px;
     height: 58px;
-    transform: translateX(11em);
+    transform: translateX(14em);
     border-radius: 0 6px 6px 0;
+    transition: all 0.3s;
 }
 aside {
     display: block;
     position: fixed;
-    color: #fff;
-    background-color: #333;
-    width: 11em;
+    background-color: #1B1B1B;
+    width: 14em;
     height: 100dvh;
     z-index: 10;
-    transform: translateX(-11em);
+    left: -14em;
+    right: auto;
     transition: all 0.3s;
 }
-aside.show { transform: translateX(0); }
+aside.show { left: 0; }
 aside button {
     display: block;
-    background-color: #555;
+    background-color: #333;
     width: 100%;
     padding: 10px;
     font-size: 1em;
-    color: #fff;
+    text-align: left;
     z-index: 5;
     outline: none;
     border: none;
 }
+aside button:active {
+    background-color: #444;
+}
 ul {
     display: none;
-    background-color: #434343;
+    background-color: #222;
 }
 ul.show { display: block; }
 li {
     display: block;
     padding: 10px 10px 10px 20px;
 }
-li:hover { background-color: #555; }
+li:active { background-color: #444; }
 body { background-color: #000; }
 .pcSize { display: none; }
 .mobileSize { display: block; }
@@ -51,7 +60,6 @@ textarea, input {
     padding: 10px;
     box-sizing: border-box;
     background: transparent;
-    color: #fff;
     font-size: 0.9em;
     caret-color: lime;
     border: none;
@@ -64,15 +72,17 @@ textarea::selection {
 }
 input {
     height: 5em;
-    font-size: 1em;
+    font-size: 1.1em;
     transition: all 0.3s;
     border: 1px solid #888;
 }
 
 @media (min-width: 768px) {
-    #closeAside { cursor: pointer; }
+    #asideSandwich { cursor: pointer; }
     button { cursor: pointer; }
+    button:hover { background-color: #444; }
     li { cursor: pointer; }
+    li:hover { background-color: #444; }
     .pcSize { display: block; }
     .mobileSize { display: none; }
 }
