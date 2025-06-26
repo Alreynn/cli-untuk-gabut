@@ -59,8 +59,7 @@ function changeCloseAsidePos(pos) {
 }
 textarea.addEventListener('click', () => {
     const closeOptions = [
-        aside, fontSizeOption,
-        closeAsidePos, changeAsidePos
+        aside, fontSizeOption, closeAsidePos
     ];
     closeOptions.forEach((item) => {
         item.classList.remove('show');
